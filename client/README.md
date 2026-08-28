@@ -1,6 +1,6 @@
-Test name
+Film Archive Website
 
-This will be good someday. I wish I was reading Berserk right now. I'd say that this is the best placeholder text ever.
+This is my website where I will store my film and anime reviews 
 
 The items will include body, header, title, and paragraph.
 
