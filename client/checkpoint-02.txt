@@ -1,0 +1,6 @@
+Name: Trever Weaver
+Project title: Film Archive
+GitHub Repository: https://github.com/Thememeboi57/citc2375-semester-project
+Live frontend: https://citc2375-semester-project-wfi9.onrender.com
+Commit: 9d4d5aeeed2d361c78e1e6e90773a10b2743a647
+Checkpoint notes: Made it into a film review site that links my LetterBoxd and my MyAnimeList pages while adding images to the page. It's looking pretty good so far ngl.
