@@ -11,3 +11,8 @@ Item fields I will use are the head, body, html, and viewport
 - GitHub Repository: https://github.com/Thememeboi57/citc2375-semester-project/tree/main
 - Live Site: https://citc2375-semester-project-wfi9.onrender.com
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
+
+## Project Progress
+- Created style.css to make sight more flashy
+- Reorganized some text here and there.
+- It looks so nice now.
