@@ -13,6 +13,6 @@ Item fields I will use are the head, body, html, and viewport
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
 ## Project Progress
-- Created style.css to make sight more flashy
+- Added some nice looking cards
 - Reorganized some text here and there.
 - It looks so nice now.
