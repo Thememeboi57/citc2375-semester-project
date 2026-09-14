@@ -14,5 +14,6 @@ Item fields I will use are the head, body, html, and viewport
 
 ## Project Progress
 - Added some nice looking cards
-- Reorganized some text here and there.
-- It looks so nice now.
+- made it into a flexbox design.
+- Added a hover effect to the cards.
+- Added item list to organize items.
