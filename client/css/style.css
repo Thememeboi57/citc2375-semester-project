@@ -95,6 +95,73 @@ img {
     height: auto;
     display: block;
 }
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 3px solid var(--color-accent);
+    border-color: var(--color-accent);
+}
+button {
+    padding: 10px 20px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+button:hover,
+button:focus {
+    background-color: var(--color-hover);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--color-surface);
+}
+caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+th,
+td {
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    text-align: left;
+}
+thead {
+    background-color: var(--color-header);
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: var(--color-background);
+}
 footer {
     background-color: var(--color-header);
     color: white;
