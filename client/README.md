@@ -13,9 +13,7 @@ Item fields I will use are the head, body, html, and viewport
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
 ## Project Progress
-- Created an Add Film page with a form based on the planned data model.
-- Added labeled form controls with appropriate input types and built-in browser validation.
-- Added an Add link to the navigation on all pages.
-- Added a project information table to the About page with a caption and accessible table headings.
-- Styled the form controls, focus states, submit button, and table using the shared stylesheet.
-- Tested browser validation for required fields and numeric limits.
+- Created a prototype Javascript in 'client/js/app.js'
+- Added project data using `const` variables, including the project title, sample item count, average rating, and review status.
+- Used `console.log()` to display the project summary, calculation result, and collection status.
+- Added a numeric calculation for the percentage of the planned collection that currently exists.
