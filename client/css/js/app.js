@@ -3,7 +3,7 @@ const currentSampleItems = 3;
 const averageRating = 4.5;
 const reviewsEnabled = true;
 
-const plannedCollectionSize = 10;
+const plannedCollectionSize = 20;
 
 const collectionPercentage = (currentSampleItems / plannedCollectionSize) * 100;
 
