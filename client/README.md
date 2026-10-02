@@ -17,3 +17,4 @@ Item fields I will use are the head, body, html, and viewport
 - Added project data using `const` variables, including the project title, sample item count, average rating, and review status.
 - Used `console.log()` to display the project summary, calculation result, and collection status.
 - Added a numeric calculation for the percentage of the planned collection that currently exists.
+- Fixed the About page, so that the navigation tools are in the header
