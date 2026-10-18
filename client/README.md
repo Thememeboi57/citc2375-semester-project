@@ -13,8 +13,10 @@ Item fields I will use are the head, body, html, and viewport
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
 ## Project Progress
-- Created a prototype Javascript in 'client/js/app.js'
-- Added project data using `const` variables, including the project title, sample item count, average rating, and review status.
-- Used `console.log()` to display the project summary, calculation result, and collection status.
-- Added a numeric calculation for the percentage of the planned collection that currently exists.
-- Fixed the About page, so that the navigation tools are in the header
+- Created 'client/js/data.js' with six sample film objects
+- Added function to find a film by ID and filter films by catagory
+- Added a function to calculate the average film rating.
+- Tested JSON serialization and parsing using 'JSON.stringify()' and 'JSON.parse()'
+- Linked 'data.js' before 'app.js' in 'index.html'
+- Updated 'app.js' to use the data collection and call its functions.
+- Tested the output in the browser console.
