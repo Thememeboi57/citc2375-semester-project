@@ -7,7 +7,7 @@ const plannedCollectionSize = 30;
 
 const collectionPercentage = (currentSampleItems / plannedCollectionSize) * 100;
 
-const summary = '${projectTitle} currently contains ${currentSampleItems} sample films';
+const summary = `${projectTitle} currently contains ${currentSampleItems} sample films.`;
 
 let collectionStatus;
 
