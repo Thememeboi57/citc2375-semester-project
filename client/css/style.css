@@ -42,7 +42,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap:  var(--space-medium);
     flex-wrap: wrap;
     margin-top: 15px;
 }
@@ -80,14 +80,14 @@ p {
 .item-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: var(--space-large);
     align-items: stretch;
 }
 .item-card {
     box-sizing: border-box;
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    padding: 20px;
+    padding: var(--space-medium);
     background-color: var(--color-surface);
     min-width: 0;
     transition: transform 0.2s ease, border-color 0.2s ease;
