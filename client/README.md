@@ -13,10 +13,9 @@ Item fields I will use are the head, body, html, and viewport
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
 ## Project Progress
-- Created 'client/js/data.js' with six sample film objects
-- Added function to find a film by ID and filter films by catagory
-- Added a function to calculate the average film rating.
-- Tested JSON serialization and parsing using 'JSON.stringify()' and 'JSON.parse()'
-- Linked 'data.js' before 'app.js' in 'index.html'
-- Updated 'app.js' to use the data collection and call its functions.
-- Tested the output in the browser console.
+- Converted the film collection container from Flexbox to CSS Grid.
+- Used `repeat(auto-fit, minmax(250px, 1fr))` to create responsive columns.
+- Added consistent grid gaps and used `align-items: stretch` to align cards within each row.
+- Introduced reusable spacing variables for consistent padding and gaps.
+- Kept Flexbox for navigation because it is well suited to arranging links in a single row.
+- Tested the layout at wide and narrow browser sizes.
