@@ -13,9 +13,11 @@ Item fields I will use are the head, body, html, and viewport
 - Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
 ## Project Progress
-- Converted the film collection container from Flexbox to CSS Grid.
-- Used `repeat(auto-fit, minmax(250px, 1fr))` to create responsive columns.
-- Added consistent grid gaps and used `align-items: stretch` to align cards within each row.
-- Introduced reusable spacing variables for consistent padding and gaps.
-- Kept Flexbox for navigation because it is well suited to arranging links in a single row.
-- Tested the layout at wide and narrow browser sizes.
+- Removed the hard-coded film articles from index.html.
+- Created a dynamic film collection using the JavaScript items array.
+- Added a category dropdown to filter films.
+- Created a renderItems() function to dynamically generate film cards.
+- Added favorite buttons to each film card.
+- Used localStorage to save favorite film IDs.
+- Restored saved favorites when the page reloads.
+- Tested filtering, favorite functionality, and persistent storage.
