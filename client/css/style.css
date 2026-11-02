@@ -84,6 +84,31 @@ p {
     gap: 24px;
     align-items: stretch;
 }
+#item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+.filter-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+.filter-container select {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+.filter-container select:focus {
+    outline: 3px solid var(--color-accent);
+    border-color: var(--color-accent);
+}
 .item-card {
     box-sizing: border-box;
     border: 1px solid var(--color-border);
@@ -95,7 +120,24 @@ p {
     overflow-wrap: hidden;
     color: var(--color-text);
 }
-
+.item-card button {
+    padding: 8px 16px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+.item-card button:hover,
+.item-card button:focus {
+    background-color: var(--color-hover);
+    text-decoration: underline;
+}
+.item-card button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
 .item-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0 0 0 /12%);
