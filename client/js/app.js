@@ -29,7 +29,7 @@ function renderItems(itemsToRender) {
         favoriteButton.textContent = item.favorite ? "Unfavorite" : "Favorite";
         favoriteButton.setAttribute("aria-pressed", item.favorite.toString());
         favoriteButton.addEventListener("click", function () {
-            toggleFavorite(item.id);
+            toggleFavorite(item.id, favoriteButton);
         });
         article.appendChild(title);
         article.appendChild(category);
@@ -45,7 +45,7 @@ function renderItems(itemsToRender) {
         itemList.appendChild(message);
     }
 }
-function toggleFavorite(id) {
+function toggleFavorite(id, button) {
     const item = getItemById(id);
     if (!item) {
         return;
@@ -58,9 +58,9 @@ function toggleFavorite(id) {
             return favoriteId !== id;
         });
     }
-    localStorage.setItem("favoriteFilmIds", JSON.stringify(favoriteIds)
-);
-    applyFilter();
+    localStorage.setItem("favoriteFilmIds", JSON.stringify(favoriteIds));
+    button.textContent = item.favorite ? "Unfavorite" : "Favorite";
+    button.setAttribute("aria-pressed", item.favorite.toString());
 }
 function applyFilter() {
     const selectedCategory = categoryFilter.value;
