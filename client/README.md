@@ -1,23 +1,16 @@
-Film Archive Website
+# React + Vite
 
-This is my website where I will store my film and anime reviews 
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-The items will include body, header, title, and paragraph.
+Currently, two official plugins are available:
 
-Item fields I will use are the head, body, html, and viewport
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Project Deployment
+## React Compiler
 
-- GitHub Repository: https://github.com/Thememeboi57/citc2375-semester-project/tree/main
-- Live Site: https://citc2375-semester-project-wfi9.onrender.com
-- Project Topic: It will be about making a website dedicated to my love of anime and movies.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Project Progress
-- Removed the hard-coded film articles from index.html.
-- Created a dynamic film collection using the JavaScript items array.
-- Added a category dropdown to filter films.
-- Created a renderItems() function to dynamically generate film cards.
-- Added favorite buttons to each film card.
-- Used localStorage to save favorite film IDs.
-- Restored saved favorites when the page reloads.
-- Tested filtering, favorite functionality, and persistent storage.
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
