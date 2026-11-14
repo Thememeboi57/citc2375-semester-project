@@ -1,16 +1,33 @@
-# React + Vite
+Film Archive Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is my website where I will store my film and anime reviews 
 
-Currently, two official plugins are available:
+The items will include body, header, title, and paragraph.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Item fields I will use are the head, body, html, and viewport
 
-## React Compiler
+## Project Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- GitHub Repository: https://github.com/Thememeboi57/citc2375-semester-project/tree/main
+- Live Site: https://citc2375-semester-project-wfi9.onrender.com
+- Project Topic: It will be about making a website dedicated to my love of anime and movies.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Project Progress
+- Created the initial HTML pages for Home, About, and Add.
+- Added consistent navigation across all pages.
+- Created a CSS stylesheet to establish the website's appearance.
+- Added a color palette and improved text readability.
+- Used Flexbox and CSS Grid to organize the film collection.
+- Created an Add Item form with input validation.
+- Added a table to the About page displaying collection information.
+- Created a JavaScript data array containing film entries.
+- Added functions to search for films and filter by category.
+- Used JSON.stringify() and JSON.parse() to practice handling collection data.
+- Created a dynamic film collection using JavaScript.
+- Added a category dropdown to filter films.
+- Created a renderItems() function to dynamically generate film cards.
+- Added favorite buttons to each film card.
+- Used localStorage to save favorite film IDs.
+- Restored saved favorites when the page reloads.
+- Tested filtering, favorite functionality, and persistent storage.
+- Began migrating the existing static website to React using Vite.
