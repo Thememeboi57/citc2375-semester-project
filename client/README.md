@@ -31,3 +31,4 @@ Item fields I will use are the head, body, html, and viewport
 - Restored saved favorites when the page reloads.
 - Tested filtering, favorite functionality, and persistent storage.
 - Began migrating the existing static website to React using Vite.
+- Migrated the Film Archive Website to React Router.

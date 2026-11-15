@@ -1,150 +1,85 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router';
 
-import Header from "./components/Header.jsx";
-import ItemList from "./components/ItemList.jsx";
+import Header from './components/Header.jsx';
 
-import { items } from "./data.js";
+import Home from './views/Home.jsx';
+import About from './views/About.jsx';
+import AddItem from './views/AddItem.jsx';
 
-import "./App.css";
+import { items as initialItems } from './data.js';
+
+import './App.css';
 
 export default function App() {
 
-    // Remember the selected category
-    const [selectedCategory, setSelectedCategory] = useState(
-        function () {
-            return localStorage.getItem(
-                "myFilmReviews.selectedCategory"
-            ) || "All";
-        }
-    );
+    const [items, setItems] = useState(initialItems);
 
-    // Load saved favorite IDs
-    const [favoriteIds, setFavoriteIds] = useState(
-        function () {
-            const saved = localStorage.getItem("favoriteFilmIds");
+    const [selectedCategory, setSelectedCategory] =
+        useState('All');
 
-            if (saved !== null) {
-                return JSON.parse(saved);
-            }
-
-            return items
-                .filter(function (item) {
-                    return item.favorite;
-                })
-                .map(function (item) {
-                    return item.id;
-                });
-        }
-    );
-
-    // Handle category changes
-    function handleCategoryChange(event) {
-
-        const category = event.target.value;
-
-        setSelectedCategory(category);
-
-        localStorage.setItem(
-            "myFilmReviews.selectedCategory",
-            category
+    const [favoriteIds, setFavoriteIds] = useState(() => {
+        const saved = localStorage.getItem(
+            'favoriteFilmIds'
         );
-    }
 
-    // Handle favorite button clicks
+        return saved ? JSON.parse(saved) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem(
+            'favoriteFilmIds',
+            JSON.stringify(favoriteIds)
+        );
+    }, [favoriteIds]);
+
     function handleToggleFavorite(itemId) {
-
-        const updatedFavorites = favoriteIds.includes(itemId)
-            ? favoriteIds.filter(function (id) {
-                return id !== itemId;
-            })
+        const updated = favoriteIds.includes(itemId)
+            ? favoriteIds.filter(id => id !== itemId)
             : [...favoriteIds, itemId];
 
-        setFavoriteIds(updatedFavorites);
-
-        localStorage.setItem(
-            "favoriteFilmIds",
-            JSON.stringify(updatedFavorites)
-        );
+        setFavoriteIds(updated);
     }
 
-    // Get unique categories from the collection
-    const categories = [
-        ...new Set(items.map(function (item) {
-            return item.category;
-        }))
-    ];
+    function handleAddItem(newItem) {
+        setItems(currentItems => [...currentItems, newItem]);
+    }
 
-    // Filter the collection
-    const filteredItems = selectedCategory === "All"
-        ? items
-        : items.filter(function (item) {
-            return item.category === selectedCategory;
-        });
+    const filteredItems =
+        selectedCategory === 'All'
+            ? items
+            : items.filter(
+                item => item.category === selectedCategory
+            );
 
     return (
         <>
             <Header />
 
-            <main className="content-width">
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <Home
+                            items={filteredItems}
+                            favoriteIds={favoriteIds}
+                            onToggleFavorite={handleToggleFavorite}
+                            selectedCategory={selectedCategory}
+                            setSelectedCategory={setSelectedCategory}
+                        />
+                    }
+                />
 
-                <h1>My Film Reviews</h1>
+                <Route
+                    path="/about"
+                    element={<About />}
+                />
 
-                <section>
-                    <h2>Film Reviews</h2>
-
-                    <p>
-                        Here are some of my favorite films
-                        and my reviews of them.
-                    </p>
-
-                    <div className="filter-container">
-
-                        <label htmlFor="category-filter">
-                            Filter by category:
-                        </label>
-
-                        <select
-                            id="category-filter"
-                            value={selectedCategory}
-                            onChange={handleCategoryChange}
-                        >
-                            <option value="All">
-                                All Categories
-                            </option>
-
-                            {categories.map(function (category) {
-                                return (
-                                    <option
-                                        key={category}
-                                        value={category}
-                                    >
-                                        {category}
-                                    </option>
-                                );
-                            })}
-
-                        </select>
-
-                    </div>
-
-                    <ItemList
-                        items={filteredItems}
-                        favoriteIds={favoriteIds}
-                        onToggleFavorite={handleToggleFavorite}
-                    />
-
-                </section>
-
-            </main>
-
-            <footer>
-                <div className="content-width">
-                    <p>
-                        &copy; 2026 My Film Reviews.
-                        All rights reserved.
-                    </p>
-                </div>
-            </footer>
+                <Route
+                    path="/add"
+                    element={<AddItem onAddItem={handleAddItem} />}
+                />
+            </Routes>
         </>
     );
 }

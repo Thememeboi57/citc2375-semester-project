@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 export default function Header() {
     return (
         <header>
@@ -8,9 +9,9 @@ export default function Header() {
                     This is where all my film reviews are stored.
                 </p>
                 <nav aria-label = "Main navigation">
-                    <a href="/">Home</a>
-                    <a href="/about.html">About</a>
-                    <a href="/add.html">Add</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/add">Add</Link>
                 </nav>
             </div>
         </header>
