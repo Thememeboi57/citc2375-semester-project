@@ -32,3 +32,4 @@ Item fields I will use are the head, body, html, and viewport
 - Tested filtering, favorite functionality, and persistent storage.
 - Began migrating the existing static website to React using Vite.
 - Migrated the Film Archive Website to React Router.
+- Moved the film collection into a JSON file and implemented asynchronous data loading using fetch.
